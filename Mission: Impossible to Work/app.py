@@ -5,6 +5,7 @@ st.title("Generate Your Absurdly Excused")
 # Daftar awal untuk pekerjaan dan kategori
 default_jobs = ["Data Scientist", "Software Engineer", "Product Manager", "Policeman", "Teacher"]
 default_cat = ["Animal", "Family", "Vehicle"]
+default_media = ['Chat Apps', 'Email']
 
 # Sidebar: Job Picker
 st.sidebar.title("Job Picker")
@@ -36,3 +37,20 @@ if st.sidebar.button("Add Category"):
     else:
         st.sidebar.error("Category already exists!")
 
+# Sidebar: Media Picker
+st.sidebar.title("Media Picker")
+media = st.sidebar.selectbox("Pick A Media", default_media)
+
+# Sidebar: OpenAI Temperature
+st.sidebar.title("OpenAI Temperature")
+
+slider_helper_text = """
+The LLM temperature in OpenAI refers to a parameter that controls the randomness of the model's responses, 
+where higher values (e.g., 1.0) make the output more creative and diverse, while lower values (e.g., 0.2) make it more 
+focused and deterministic.
+"""
+
+nilai = st.sidebar.slider("Set Your OpenAI Temperature", 0, 10, 5,  help=slider_helper_text)
+
+if st.sidebar.button("Tombol Khusus", key="sidebar_button"):
+    pass
