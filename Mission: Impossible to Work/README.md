@@ -71,7 +71,7 @@ Masalah ini diformulasikan sebagai **natural language generation (NLG)** di mana
 - **Output:** Alasan izin kerja yang lucu dan relevan dalam bahasa yang dipilih.  
 
 ### 5.3 ⚙️ Techniques  
-- **🧠 Model Language:** OpenAI GPT-4 via LangChain.  
+- **🧠 Model Language:** OpenAI GPT-3.5 via LangChain.  
 - **✍️ Prompt Engineering:**  
   - Template disesuaikan untuk setiap bahasa yang didukung.  
   - Menggunakan variabel `{job}`, `{category}`, `{media_type}`, dan `{language}` dalam prompt.  
